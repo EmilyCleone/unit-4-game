@@ -2,32 +2,31 @@
 var numberOfWins = 0;
 var numberOfLosses = 0;
 var totalScore = 0;
-// var gemValue = [1,2,3,4,5,6,7,8,9,10,11,12];
-var gemArray=[0,0,0,0];
+var gemList=[0,0,0,0];
 var randomNumber = 0;
 
 
 
-//generate random number that displays on screen between 19 and 120 at the restart of each game
-function updateHTML(){
+
+function updateValues(){
     document.getElementById("wins").innerHTML = numberOfWins;
     document.getElementById("losses").innerHTML = numberOfLosses;
     document.getElementById("totalScore").innerHTML = totalScore;
     document.getElementById("randomNumber").innerHTML = randomNumber;
     }
 
-
+//generate random number that displays on screen between 19 and 120 at the restart of each game
 function genRandomNumber(){
 
         randomNumber= Math.floor(Math.random()* 101)+18;
-        updateHTML();
+        updateValues();
 
 }
 
 
 function updateScoreCounter(value){
     totalScore += value;
-    updateHTML();
+    updateValues();
     checkWinLose();
 }
 
@@ -36,22 +35,16 @@ function updateScoreCounter(value){
 
 
 function userClicksGem(gemIndex){
-    
-    // document.getElementById("red").innerHTML = Math.floor(Math.random() * gemValue);
-    // document.getElementById("blue").innerHTML = Math.floor(Math.random() * gemValue);
-    // document.getElementById("green").innerHTML = Math.floor(Math.random() * gemValue);
-    // document.getElementById("yellow").innerHTML = Math.floor(Math.random() * gemValue);
-    
    
-    if(gemArray[gemIndex] == 0){
-        gemArray[gemIndex] = Math.floor(Math.random() * 12)+1;
+    if(gemList[gemIndex] === 0){
+        gemList[gemIndex] = Math.floor(Math.random() * 12)+1;
     }
-updateScoreCounter(gemArray[gemIndex]);
+updateScoreCounter(gemList[gemIndex]);
     
 }
 
 function checkWinLose(){
-    if(totalScore == randomNumber){
+    if(totalScore === randomNumber){
         numberOfWins +=1;
         resetGameValues();
         startNewGame();
@@ -69,7 +62,7 @@ function checkWinLose(){
 function resetGameValues(){
     totalScore = 0;
     randomNumber = 0;
-    gemArray = [0,0,0,0];
+    gemList = [0,0,0,0];
 }
 
 function startNewGame(){

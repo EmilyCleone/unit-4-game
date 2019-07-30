@@ -1,24 +1,31 @@
-
+body{
+    
+    background-image: url(https://staticdelivery.nexusmods.com/images/110/259193-1365875970.jpg)
+}
 
 h1{
     background-color:grey;
 }
 
 .instructions{
-    background-color: peachpuff;
+    background-color: white;
+    opacity: 0.5;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .win-lose-box{
-    background-color: peachpuff;
+    background-color: white;
+    opacity: 0.5;
     width: 150px;
     height: 150px;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 
 }
 
 .randomNumberBox{
-    background-color: black;
-    color: white;
+    background-color: grey;
+    opacity: 0.75;
+    color:black;
     width: 150px;
     height: 150px;
     font-size: 45px;
@@ -30,11 +37,21 @@ h1{
 
 #totalScore{
     background-color: grey;
+    opacity: 0.75;
     color: black;
-    font-size: 40px;
+    font-size: 45px;
     text-align: center;
     width: 150px;
     height:150px;
     
     
+}
+
+#yourGuess{
+    color:white;
+    font-size: 20px;
+}
+#targetNumber{
+    color:white;
+    font-size: 20px;
 }
