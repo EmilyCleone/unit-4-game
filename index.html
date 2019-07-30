@@ -1,23 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link href = "./assets/css/style.css" rel="stylesheet" type="text/css">
-    
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="./assets/css/reset.css" rel="stylesheet" type="text/css">
+    <link href="./assets/css/style.css" rel="stylesheet" type="text/css">
+
     <title>Document</title>
 </head>
+
 <body>
-    
+
+    <h1>Crystals Collector!</h1>
+    <br>
+    <div class="instructions">
+        <p>You will be given a random
+            number at the start of the game.
+            <br><br>
+            There are four crystals below. By
+            clicking on a crystal, you will add a
+            specific amount of points to your total
+            score.
+            <br><br>
+            You win the game by matching your total
+            score to random number, you lose the game
+            if your total score goes above the random number.
+            <br><br>
+            Each time when the game starts, the game will
+            change the values of each cystal.
+        </p>
+    </div>
+    <div class="row">
+        <div class="col-md-3">
+            <div class="win-lose-box">
+                <p>Wins <span id="wins">0</span></p>
+                <p>Losses <span id="losses">0</span></p>
+
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div id="totalScore">
+                <p>Total Score:</p>
+            </div>
+            <p id="yourGuess">Your Guess</p>
+        </div>
+        <div class="col-md-3">
+            <div class="randomNumberBox">
+                <p id="randomNumber"></p>
+            </div>
+            <p id="targetNumber">Target Number</p>
+        </div>
+    </div>
+    <div class="col-md-3"></div>
+    </div>
+
+    <!-- <div id="totalScore"><p>Total Score:</p></div>
+    <p id="yourGuess">Your Guess</p> -->
 
 
+    <!-- <div class="randomNumberBox">
+        <p id="randomNumber"></p>
+    </div>
+    <p id="targetNumber">Target Number</p>
+</div> -->
 
 
+    <!-- <div class="scoreBoard">
+        <ul>
+            <li>
+                <span id="wins">Wins:</span>
+            </li>
+            <li>
+                <span id="losses">Losses:</span>
+            </li>
+        </ul>
+    </div> -->
 
+    <div class="container">
+        <div class="row">
+            <div class="col-sm">
+                <button id="red" onclick="userClicksGem(0)">
+                    <image src="assets/images/redGem.jpg" alt="red gem" height="60" width="60">
+                </button></div>
+            <div class="col-sm">
+                <button id="blue" onclick="userClicksGem(1)"><img src="assets/images/blueGem.jpg" alt="blue gem"
+                        height="60" width="60"></div> </button>
+            <div class="col-sm">
+                <button id="green" onclick="userClicksGem(2)"><img src="assets/images/greenGem.jpg" alt="green gem"
+                        height="60" width="60"></div> </button>
+            <div class="col-sm">
+                <button id="yellow" onclick="userClicksGem(3)"><img src="assets/images/yellowGem.jpg" alt="yellow gem"
+                        height="60" width="60"></div> </button>
+        </div>
+    </div>
+
+    <script src="assets/javascript/game.js">
+        $(document).ready(function () {
+            startNewGame();
+        });
+    </script>
 
 </body>
+
 </html>
