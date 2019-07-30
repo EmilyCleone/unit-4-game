@@ -8,20 +8,10 @@ h1{
     background-color: peachpuff;
 }
 
-#number{
-    background-color: yellow;
-    /* margin: 0 auto; */
-    /* height: 50px; */
-    text-align: center;
-    font-size: 45px;
-
-}
 .win-lose-box{
     background-color: peachpuff;
     width: 150px;
     height: 150px;
-    margin: 0 auto;
-    float:left;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 
 }
