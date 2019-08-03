@@ -6,7 +6,8 @@ var gemList=[0,0,0,0];
 var randomNumber = 0;
 
 
-
+resetGameValues();
+startNewGame();
 
 function updateValues(){
     document.getElementById("wins").innerHTML = numberOfWins;
@@ -19,7 +20,6 @@ function updateValues(){
 function genRandomNumber(){
 
         randomNumber= Math.floor(Math.random()* 101)+18;
-        updateValues();
 
 }
 
@@ -55,7 +55,7 @@ function checkWinLose(){
         resetGameValues();
         startNewGame();
     }
-    
+   
 }
 
 
@@ -67,5 +67,5 @@ function resetGameValues(){
 
 function startNewGame(){
     genRandomNumber();
-}
+};
 
